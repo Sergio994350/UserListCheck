@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">UserListCheck</string>
+    <string name="john">John</string>
+    <string name="doe">Doe</string>
+    <string name="john_doe_email">john_doe@yahoo.com</string>
+    <string name="userId">7</string>
+    <string name="john_doe">John Doe</string>
+    <string name="first_name_hint">First Name</string>
+    <string name="last_name_hint">Last Name</string>
+    <string name="email_hint">e-mail</string>
+    <string name="edit_user">Edit User</string>
+    <string name="delete">delete</string>
+    <string name="save">save</string>
+    <string name="add_new_user">Add New User</string>
+    <string name="refresh_data">Refresh Data</string>
+</resources>
