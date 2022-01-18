@@ -13,9 +13,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.UserListCheck">
         <activity
-            android:name=".activity.EditUserActivity" />
+            android:name=".ui.EditUserActivity" />
         <activity
-            android:name=".activity.MainActivity"
+            android:name=".ui.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

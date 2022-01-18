@@ -1,5 +1,6 @@
-package com.sergio994350.userlistcheck.activity
+package com.sergio994350.userlistcheck.ui
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
@@ -41,13 +42,13 @@ class MainActivity : AppCompatActivity() {
             initMainViewModel()
         }
 
-        val buttonAddNewUser = findViewById<FloatingActionButton>(R.id.button_add_user)
-        buttonAddNewUser.setOnClickListener {
-            Log.d("logging", "Add New User")
-            val intent = EditUserActivity.newIntentAddDataUser(this)
-            startActivity(intent)
-
-        }
+//        [prepared button to add new user if need]
+//        val buttonAddNewUser = findViewById<FloatingActionButton>(R.id.button_add_user)
+//        buttonAddNewUser.setOnClickListener {
+//            Log.d("logging", "Add New User")
+//            val intent = EditUserActivity.newIntentAddDataUser(this)
+//            startActivity(intent)//
+//        }
     }
 
     private fun initViewModel() {
@@ -63,6 +64,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    @SuppressLint("NotifyDataSetChanged")
     private fun initMainViewModel() {
         val viewModel = ViewModelProvider(this).get(MainActivityViewModel::class.java)
         viewModel.getAllRepositoryList().observe(this, Observer<List<DataUser>> {
@@ -76,9 +78,13 @@ class MainActivity : AppCompatActivity() {
         recyclerViewAdapter.onDataUserClickListener = {
             // log (element id) to click
             Log.d("logging", "click by " + it.id.toString())
-            val intent = EditUserActivity.newIntentEditDataUser(this, it.id)
+            val firstname = it.first_name
+            val lastname = it.last_name
+            val email = it.email
+            val avatar = it.avatar
+            val intent = EditUserActivity
+                .newIntentEditDataUser(this, it.id, firstname, lastname, email, avatar)
             startActivity(intent)
         }
     }
-
 }

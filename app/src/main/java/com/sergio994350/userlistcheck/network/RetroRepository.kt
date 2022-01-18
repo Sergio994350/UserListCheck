@@ -47,20 +47,4 @@ class RetroRepository @Inject constructor(
             }
         })
     }
-
-//    fun insertRecords(dataUser: DataUser) {
-//        appDao.insertRecords(dataUser)
-//    }
-//
-//    fun getDataUserById(id: Int): DataUser {
-//        return appDao.getDataUserById(id)
-//    }
-//
-//    fun updateRecord(dataUser: DataUser) {
-//        appDao.updateRecord(dataUser)
-//    }
-//
-//    fun deleteRecord(dataUser: DataUser) {
-//        appDao.deleteRecord(dataUser)
-//    }
 }

@@ -72,5 +72,4 @@ class RecyclerViewAdapter : RecyclerView.Adapter<RecyclerViewAdapter.MyViewHolde
     interface OnDataUserClickListener {
         fun onDataUserClick(dataUser: DataUser)
     }
-
 }
